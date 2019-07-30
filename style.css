@@ -12,6 +12,10 @@ input, button {
   max-width: 1060px;
   margin: 0 auto;
   padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
 }
 
 body {
@@ -24,14 +28,9 @@ body {
 header#main-header {
   height: 46px;
   background-color: #fff;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25)
-}
-
-header#main-header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1;
 }
 
 header#main-header nav ul {
@@ -91,4 +90,210 @@ header#main-header div.side button {
   color: #fff;
   border: 0;
   border-radius: 16px;
+  cursor: pointer;
+}
+
+div.banner {
+  height: 380px;
+  width: 100%;
+  background: #3bb9e3;
+  overflow: hidden;
+}
+
+div.bar {
+  height: 59px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+div.bar ul {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  margin-left: 285px;
+}
+
+div.bar ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  padding: 0 15px;
+  position: relative;
+}
+
+div.bar ul li.active::after {
+  content: '';
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1DA1F2;
+}
+
+div.bar ul li span {
+  font-size: 12px;
+  color: #707E88;
+}
+
+div.bar ul li strong {
+  font-size: 18px;
+  color: #788A98;
+}
+
+div.bar ul li.active strong {
+  color: #1DA1F2;
+}
+
+div.bar div.actions {
+  display: flex;
+  align-items: center;
+}
+
+div.bar div.actions a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+}
+
+div.bar div.actions button {
+  height: 36px;
+  width: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #1DA1F2;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid #1DA1F2;
+  border-radius: 16px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+div.wrapper-content {
+  display: flex;
+}
+
+div.wrapper-content aside.profile {
+  width: 260px;
+}
+
+div.wrapper-content aside.profile img.avatar {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin-top: -170px;
+}
+
+div.wrapper-content aside.profile h1 {
+  font-size: 22px;
+  color: #101214;
+  margin-top: 10px;
+}
+
+div.wrapper-content aside.profile span {
+  font-size: 14px;
+  color: #566374;
+}
+
+div.wrapper-content aside.profile p {
+  font-size: 14px;
+  color: #14171A;
+  margin-top: 15px;
+}
+
+div.wrapper-content aside.profile ul {
+  margin-top: 20px;
+  list-style: none;
+}
+
+div.wrapper-content aside.profile ul li {
+  font-size: 14px;
+  color: #536373;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+div.wrapper-content aside.profile ul li:first {
+  margin-top: 0;
+}
+
+div.wrapper-content aside.profile ul li img {
+  margin-right: 10px;
+}
+
+div.wrapper-content aside.profile ul li a:link,
+div.wrapper-content aside.profile ul li a:hover, 
+div.wrapper-content aside.profile ul li a:visited,
+div.wrapper-content aside.profile ul li a:active {
+  color: #0B5CAD;
+  text-decoration: none;
+}
+
+div.wrapper-content aside.profile .widget {
+  margin-top: 20px
+}
+
+div.wrapper-content aside.profile .widget strong {
+  font-weight: normal;
+  color: #1DA1F2;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+div.wrapper-content aside.profile .widget strong img {
+  margin-right: 5px;
+}
+
+div.wrapper-content aside.profile div.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+div.wrapper-content aside.profile div.actions button {
+  height: 36px;
+  width: 128px;
+  background: #1DA1F2;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 16px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+div.wrapper-content aside.profile .widget ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.wrapper-content aside.profile .followers ul li {
+  width: 48px;
+  height: 48px;
+  background-color: #D0D5D9;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin: 0 4px 4px 0;
+}
+
+div.wrapper-content aside.profile .images ul li {
+  width: 83px;
+  height: 83px;
+  background-color: #D0D5D9;
+  border-radius: 5%;
+  flex-shrink: 0;
+  margin: 0 3px 3px 0;
 }
