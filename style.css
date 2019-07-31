@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-input, button {
+input,
+button {
   outline: 0;
 }
 
@@ -20,7 +21,7 @@ input, button {
 
 body {
   background-color: #e6ecf0;
-  font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
 }
@@ -68,7 +69,7 @@ header#main-header div.side input {
   color: #667581;
   font-size: 12px;
   font-weight: 500;
-  background: #f5f8fa url('/images/search.svg') no-repeat 190px center;
+  background: #f5f8fa url("/images/search.svg") no-repeat 190px center;
 }
 
 header#main-header div.side img {
@@ -89,7 +90,7 @@ header#main-header div.side button {
   font-size: 14px;
   color: #fff;
   border: 0;
-  border-radius: 16px;
+  border-radius: 25px;
   cursor: pointer;
 }
 
@@ -124,27 +125,27 @@ div.bar ul li {
 }
 
 div.bar ul li.active::after {
-  content: '';
+  content: "";
   height: 4px;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #1DA1F2;
+  background-color: #1da1f2;
 }
 
 div.bar ul li span {
   font-size: 12px;
-  color: #707E88;
+  color: #707e88;
 }
 
 div.bar ul li strong {
   font-size: 18px;
-  color: #788A98;
+  color: #788a98;
 }
 
 div.bar ul li.active strong {
-  color: #1DA1F2;
+  color: #1da1f2;
 }
 
 div.bar div.actions {
@@ -167,17 +168,21 @@ div.bar div.actions button {
   align-items: center;
   justify-content: center;
   background: #fff;
-  color: #1DA1F2;
+  color: #1da1f2;
   font-size: 14px;
   font-weight: bold;
-  border: 1px solid #1DA1F2;
-  border-radius: 16px;
+  border: 1px solid #1da1f2;
+  border-radius: 25px;
   margin-right: 5px;
   cursor: pointer;
 }
 
 div.wrapper-content {
   display: flex;
+}
+
+div.wrapper-content.container {
+  align-items: flex-start;
 }
 
 div.wrapper-content aside.profile {
@@ -205,7 +210,7 @@ div.wrapper-content aside.profile span {
 
 div.wrapper-content aside.profile p {
   font-size: 14px;
-  color: #14171A;
+  color: #14171a;
   margin-top: 15px;
 }
 
@@ -231,20 +236,20 @@ div.wrapper-content aside.profile ul li img {
 }
 
 div.wrapper-content aside.profile ul li a:link,
-div.wrapper-content aside.profile ul li a:hover, 
+div.wrapper-content aside.profile ul li a:hover,
 div.wrapper-content aside.profile ul li a:visited,
 div.wrapper-content aside.profile ul li a:active {
-  color: #0B5CAD;
+  color: #0b5cad;
   text-decoration: none;
 }
 
 div.wrapper-content aside.profile .widget {
-  margin-top: 20px
+  margin-top: 20px;
 }
 
 div.wrapper-content aside.profile .widget strong {
   font-weight: normal;
-  color: #1DA1F2;
+  color: #1da1f2;
   font-size: 14px;
   display: flex;
   align-items: center;
@@ -264,12 +269,12 @@ div.wrapper-content aside.profile div.actions {
 div.wrapper-content aside.profile div.actions button {
   height: 36px;
   width: 128px;
-  background: #1DA1F2;
+  background: #1da1f2;
   color: #fff;
   font-size: 14px;
   font-weight: bold;
   border: 0;
-  border-radius: 16px;
+  border-radius: 25px;
   margin-right: 5px;
   cursor: pointer;
 }
@@ -283,7 +288,7 @@ div.wrapper-content aside.profile .widget ul {
 div.wrapper-content aside.profile .followers ul li {
   width: 48px;
   height: 48px;
-  background-color: #D0D5D9;
+  background-color: #d0d5d9;
   border-radius: 50%;
   flex-shrink: 0;
   margin: 0 4px 4px 0;
@@ -292,8 +297,140 @@ div.wrapper-content aside.profile .followers ul li {
 div.wrapper-content aside.profile .images ul li {
   width: 83px;
   height: 83px;
-  background-color: #D0D5D9;
+  background-color: #d0d5d9;
   border-radius: 5%;
   flex-shrink: 0;
   margin: 0 3px 3px 0;
+}
+
+div.wrapper-content aside.widgets {
+  width: 290px;
+}
+
+div.wrapper-content aside.widgets .widget {
+  background: #fff;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+div.wrapper-content aside.widgets .widget.follow .title {
+  display: flex;
+  align-items: center;
+}
+
+div.wrapper-content aside.widgets .widget.follow .title strong {
+  font-size: 17px;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+div.wrapper-content aside.widgets .widget.follow .title a:link,
+div.wrapper-content aside.widgets .widget.follow .title a:hover,
+div.wrapper-content aside.widgets .widget.follow .title a:visited,
+div.wrapper-content aside.widgets .widget.follow .title a:active {
+  color: #1da1f2;
+  font-size: 12px;
+  font-weight: normal;
+  text-decoration: none;
+  margin-right: 8px;
+}
+
+div.wrapper-content aside.widgets .widget.follow .title:last-child {
+  margin-right: 0;
+}
+
+div.wrapper-content aside.widgets .widget.follow ul {
+  list-style: none;
+}
+
+div.wrapper-content aside.widgets .widget.follow ul li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 15px 0;
+  height: 79px;
+  border-bottom: 1px solid #e6ecf0;
+}
+
+div.wrapper-content aside.widgets .widget.follow ul li .profile {
+  display: flex;
+}
+
+div.wrapper-content aside.widgets .widget.follow ul li .profile img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+div.wrapper-content aside.widgets .widget.follow ul li .profile .info {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  color: #333;
+}
+
+div.wrapper-content aside.widgets .widget.follow ul li .profile .info span {
+  color: #536373;
+  font-weight: normal;
+}
+
+div.wrapper-content aside.widgets .widget.follow ul li .profile .info button {
+  height: 29px;
+  width: 89px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #1da1f2;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid #1da1f2;
+  border-radius: 25px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+div.wrapper-content aside.widgets .widget.follow ul li a:link,
+div.wrapper-content aside.widgets .widget.follow ul li a:hover,
+div.wrapper-content aside.widgets .widget.follow ul li a:visited,
+div.wrapper-content aside.widgets .widget.follow ul li a:active {
+  color: #ccd6dd;
+  text-decoration: none;
+}
+
+div.wrapper-content aside.widgets .widget.follow .footer {
+  margin-top: 15px;
+}
+
+div.wrapper-content aside.widgets .widget.trends {
+  font-size: 17px;
+  font-weight: bold;
+  color: #292f33;
+}
+
+div.wrapper-content aside.widgets .widget.trends ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+div.wrapper-content aside.widgets .widget.trends ul li {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  font-weight: normal;
+  color: #536373;
+  margin-top: 10px;
+}
+
+div.wrapper-content aside.widgets .widget.trends ul li a:link,
+div.wrapper-content aside.widgets .widget.trends ul li a:hover,
+div.wrapper-content aside.widgets .widget.trends ul li a:visited,
+div.wrapper-content aside.widgets .widget.trends ul li a:active {
+  color: #1d8dee;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 3px;
 }
